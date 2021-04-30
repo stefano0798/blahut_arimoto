@@ -94,7 +94,6 @@ public class BlahutArimoto {
 			double tolerance = diff.getFrobeniusNorm();
 
 			for (int i=0; i<r[0].length; i++) {
-				System.out.println("Updating r[0][" + i + "] from " + r[0][i] + " to " + r1.getEntry(i, 0));
 				r[0][i] = r1.getEntry(i, 0);
 			}
 
@@ -122,6 +121,7 @@ public class BlahutArimoto {
 				}
 			}
 		}
+		System.out.println("Final priors: " + r[0][0] + ", " + r[0][1] + ", " + r[0][2]);
 		return c / Math.log(BASE_LOG);
 	}
 
